@@ -6,10 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
     <script>
-        alert("hello,world!");
+        alert("hello,world! Happy" + dayName + ".");
         let firstName = "Yousuf";
         let lastName = "Mahomed";
         console.log(firstName + " " + lastName);
+        //ignore all the lines above
+
+        // from this line
+        // problem 1
+        function add7(a) {
+            console.log(a + 7);
+        }
+        // end
+
+        // problem 2
+        function multiply(firstNumber,secondNumber) {
+            multiply = firstNumber*secondNumber
+            return firstNumber*secondNumber;
+        }
+        //end
+
+        //problem 3
+        function Capitalize(str) {
+            let firstLetter = string.slice((0,1));
+            let restOfString = string.slice(1);
+            return firstLetter.toUppercase() + restOfString;
+        };
+        //end
+
+        //problem 4        
+        function lastLetter(endOfString) {
+            let endOfString = endOfString.slice(-1);
+            return endOfString;
+        }
+        //end
+
+        const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let now = new Date();
+        let dayName = daysOfTheWeek[now.getDay()];
+        alert(`Hello, world! Happy ${dayName}.`);
+        
+        
+
     </script>
 </head>
 <body>
