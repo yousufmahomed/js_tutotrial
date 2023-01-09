@@ -18,17 +18,17 @@ console.log(completeUrls(states));
 // filter: we need to return both dakotas, use includes('dakota')
 // and a regex to show the length of array being split is 2
 
-let states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"];
+let state = ["Kansas", "Nebraska", "North Dakota", "South Dakota"];
 
-function containsDakota(states) {
-  return states.filter(state => state.includes("Dakota"));
+function containsDakota(state) {
+  return state.filter(state => state.includes("Dakota"));
 }
-console.log(containsDakota(states));
+console.log(containsDakota(state));
 
-function twoWordStates(states) {
+function twoWordStates(state) {
   return states.filter(state => state.split(/\s+/).length === 2);
 }
-console.log(twoWordStates(states));
+console.log(twoWordStates(state));
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
