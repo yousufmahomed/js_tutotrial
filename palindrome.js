@@ -1,16 +1,32 @@
-// a function to first split , then reverse and join a string 
-// first step in creating a palindrome checker
-
-function reverse(string){
-    return Array.from(string).reverse.join("");
+// Reverses a string.
+function reverse(string) {
+  return Array.from(string).reverse().join("");
 }
 
-function palindrome(string){
-    let processedContent = string.toLowerCase();
-    processedContent === reverse(processedContent);
+// Defines a Phrase object.
+function Phrase(content) {
+  this.content = content;
+
+  // Returns content processed for palindrome testing.
+  this.processedContent = function processedContent() {
+    return this.content.toLowerCase();
+  }
+
+  // Returns true if the phrase is a palindrome, false otherwise.
+  this.palindrome = function palindrome() {
+    return this.processedContent() === reverse(this.processedContent());
+  }
 }
 
-function emailParts(email) {
-  let lowerCaseEmail = email.toLowerCase();
-  return Array.from(lowerCaseEmail).split("@");
+// Defines a TranslatedPhrase object.
+function TranslatedPhrase(content, translation) {
+  this.content = content;
+  this.translation = translation;
+
+  // Returns translation processed for palindrome testing.
+  this.processedContent = function processedContent() {
+    return this.translation.toLowerCase();
+  }
 }
+
+TranslatedPhrase.prototype = new Phrase();
